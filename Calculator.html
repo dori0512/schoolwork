@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Calculator</title>
+    <style>
+        .calculator {
+            width: 350px;
+            background-color: #f2f2f2;
+            border: 2px solid #333;
+            border-radius: 5px;
+            margin: 0 auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .display {
+            background-color: #333;
+            color: #fff;
+            font-size: 40px;
+            padding: 15px;
+            text-align: right;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-gap: 5px;
+            padding: 10px;
+        }
+
+        .button {
+            background-color: #666;
+            color: #fff;
+            font-size: 20px;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #555;
+        }
+
+        .button:active {
+            background-color: #444;
+        }
+
+        .clear {
+            grid-column-start: 1;
+            grid-column-end: 6;
+            color: #10c2e2;
+            font-weight: bold;
+            font-size: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="calculator">
+        <div class="display" id="display">0</div>
+        <div class="buttons">
+            <div class="button" onclick="calculator.appendNumber(7)">7</div>
+            <div class="button" onclick="calculator.appendNumber(8)">8</div>
+            <div class="button" onclick="calculator.appendNumber(9)">9</div>
+            <div class="button" onclick="calculator.divide()">÷</div>
+            <div class="button" onclick="calculator.squareRoot()">√</div>
+            <div class="button" onclick="calculator.appendNumber(4)">4</div>
+            <div class="button" onclick="calculator.appendNumber(5)">5</div>
+            <div class="button" onclick="calculator.appendNumber(6)">6</div>
+            <div class="button" onclick="calculator.multiply()">x</div>
+            <div class="button" onclick="calculator.cubeRoot()">&#8731;</div>
+            <div class="button" onclick="calculator.appendNumber(1)">1</div>
+            <div class="button" onclick="calculator.appendNumber(2)">2</div>
+            <div class="button" onclick="calculator.appendNumber(3)">3</div>
+            <div class="button" onclick="calculator.subtract()">-</div>
+            <div class="button" onclick="calculator.reciprocal()">1/x</div>
+            <div class="button" onclick="calculator.appendNumber(0)">0</div>
+            <div class="button" onclick="calculator.appendDecimal()">.</div>
+            <div class="button" onclick="calculator.calculate()">=</div>
+            <div class="button" onclick="calculator.add()">+</div>
+            <div class="button" onclick="calculator.negate()">+/-</div>
+            <div class="button clear" onclick="calculator.clearDisplay()"> AC</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
